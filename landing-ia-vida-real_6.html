@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IA para a Vida Real — Guia prático de prompts para usar ChatGPT no dia a dia</title>
+<meta name="description" content="Guia com prompts prontos para estudar, organizar a rotina e escrever melhor com IA. Funciona com ChatGPT gratuito. Copie, cole, adapte — resultado em minutos.">
+
+<meta property="og:type"        content="product">
+<meta property="og:title"       content="IA para a Vida Real — Guia prático para usar ChatGPT no seu dia a dia">
+<meta property="og:description" content="Prompts práticos para estudar, organizar a rotina e escrever melhor com IA. Sem precisar saber escrever prompts.">
+<meta property="og:image"       content="<!-- PREVIEW_IMAGE_COVER -->">
+<meta property="og:url"         content="<!-- PAGE_URL -->">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "IA para a Vida Real: guia prático de prompts para estudar, organizar e escrever",
+  "description": "Guia com prompts prontos organizados em 3 módulos — Estudo, Produtividade e Comunicação. Compatível com ChatGPT gratuito. Ideal para iniciantes.",
+  "image": "<!-- PREVIEW_IMAGE_COVER -->",
+  "offers": {
+    "@type": "Offer",
+    "price": "17.90",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "url": "<!-- CHECKOUT_URL -->"
+  }
+}
+</script>
+
+<!-- META PIXEL — cole seu snippet aqui -->
+<!-- META_PIXEL_SNIPPET_START -->
+<!-- META_PIXEL_SNIPPET_END -->
+
+<!-- GOOGLE ANALYTICS — cole seu snippet aqui -->
+<!-- GA_SNIPPET_START -->
+<!-- GA_SNIPPET_END -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:        #FFFFFF;
+  --bg2:       #F7F8FA;
+  --bg-dark:   #0F172A;
+  --ink:       #0F172A;
+  --ink2:      #475569;
+  --ink3:      #94A3B8;
+  --blue:      #2563EB;
+  --blue2:     #3B82F6;
+  --blue-dark: #1D4ED8;
+  --blue-bg:   #EFF6FF;
+  --green:     #16A34A;
+  --green-bg:  #F0FDF4;
+  --red:       #DC2626;
+  --red-bg:    #FEF2F2;
+  --amber:     #D97706;
+  --amber-bg:  #FFFBEB;
+  --radius:    10px;
+  --radius-lg: 16px;
+  --border:    rgba(15,23,42,.09);
+  --shadow-sm: 0 1px 3px rgba(15,23,42,.08);
+  --shadow:    0 4px 16px rgba(15,23,42,.10);
+  --shadow-lg: 0 12px 40px rgba(15,23,42,.14);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);color:var(--ink);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  font-size:16px;line-height:1.6;
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.reveal{
+  opacity:1;transform:none;
+}
+.js-loaded .reveal{
+  opacity:0;transform:translateY(22px);
+  transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1);
+}
+.js-loaded .reveal.visible{opacity:1;transform:none}
+
+.container   {max-width:860px;margin:0 auto;padding:0 24px}
+.container--sm{max-width:680px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+
+.label{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);background:var(--blue-bg);
+  border:1px solid rgba(37,99,235,.18);
+  padding:5px 14px;border-radius:40px;margin-bottom:20px;
+}
+
+.section-title{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(26px,4vw,38px);font-weight:700;
+  line-height:1.15;color:var(--ink);margin-bottom:14px;letter-spacing:-.02em;
+}
+.section-sub{font-size:17px;color:var(--ink2);line-height:1.65}
+
+.btn{
+  display:inline-block;background:var(--blue);color:#fff;
+  font-family:'Inter',sans-serif;font-size:16px;font-weight:600;
+  padding:16px 36px;border-radius:var(--radius);
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background .18s,transform .15s,box-shadow .18s;
+  box-shadow:0 4px 14px rgba(37,99,235,.35);letter-spacing:-.01em;
+}
+.btn:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.4)}
+.btn--lg{font-size:17px;padding:18px 44px}
+.btn--ghost{background:transparent;border:1.5px solid var(--blue);color:var(--blue);box-shadow:none}
+.btn--ghost:hover{background:var(--blue);color:#fff}
+.btn--white{background:#fff;color:var(--blue);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.btn--white:hover{background:#EFF6FF;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.btn:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+
+.urgency-bar{background:var(--blue);padding:13px 24px;text-align:center}
+.urgency-bar p{font-size:14px;font-weight:500;color:#fff}
+.urgency-bar strong{font-weight:700}
+
+#hero{
+  background:var(--bg-dark);padding:0;
+  min-height:100vh;display:grid;align-items:center;
+  position:relative;overflow:hidden;
+}
+.hero__grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(37,99,235,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(37,99,235,.07) 1px,transparent 1px);
+  background-size:48px 48px;pointer-events:none;
+}
+.hero__glow{
+  position:absolute;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(37,99,235,.22) 0%,transparent 65%);
+  top:-160px;right:-160px;pointer-events:none;
+}
+.hero__glow2{
+  position:absolute;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(59,130,246,.14) 0%,transparent 65%);
+  bottom:-80px;left:-80px;pointer-events:none;
+}
+.hero__inner{
+  position:relative;z-index:2;max-width:800px;margin:0 auto;
+  padding:128px 24px 96px;text-align:center;
+}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--blue2);background:rgba(59,130,246,.12);
+  border:1px solid rgba(59,130,246,.22);
+  padding:6px 16px;border-radius:40px;margin-bottom:32px;
+}
+.hero__badge-dot{
+  width:6px;height:6px;background:var(--blue2);border-radius:50%;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero__h1{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(32px,5.2vw,58px);font-weight:800;
+  line-height:1.09;color:#fff;margin-bottom:22px;letter-spacing:-.03em;
+}
+.hero__h1 .accent{color:var(--blue2)}
+.hero__sub{
+  font-size:clamp(16px,2vw,18px);color:rgba(255,255,255,.62);
+  max-width:560px;margin:0 auto 40px;line-height:1.72;font-weight:400;
+}
+.hero__ctas{display:flex;flex-direction:column;align-items:center;gap:14px}
+.hero__trust{
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;
+  font-size:13px;color:rgba(255,255,255,.32);
+}
+.hero__trust-sep{color:rgba(255,255,255,.14)}
+.hero__stat-row{
+  display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+  margin-top:72px;padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.hero__stat{text-align:center}
+.hero__stat strong{
+  display:block;font-family:'Sora',sans-serif;
+  font-size:26px;font-weight:700;color:#fff;letter-spacing:-.02em;
+}
+.hero__stat span{font-size:13px;color:rgba(255,255,255,.38)}
+
+#problem{background:var(--bg2)}
+.problem__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.problem__card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:28px 26px;box-shadow:var(--shadow-sm);
+}
+.problem__card-icon{font-size:26px;margin-bottom:14px}
+.problem__card h3{font-size:15px;font-weight:600;margin-bottom:8px}
+.problem__card p{font-size:14px;color:var(--ink2);line-height:1.6}
+.problem__insight{
+  margin-top:32px;background:var(--blue-bg);
+  border:1px solid rgba(37,99,235,.15);border-left:3px solid var(--blue);
+  border-radius:var(--radius);padding:22px 26px;
+}
+.problem__insight p{font-size:15px;color:var(--ink);line-height:1.7}
+
+#solution{background:var(--bg)}
+.solution__inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.solution__visual{
+  background:var(--bg-dark);border-radius:var(--radius-lg);
+  padding:28px;box-shadow:var(--shadow-lg);
+  border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;
+}
+.solution__visual::after{
+  content:'';position:absolute;top:0;right:0;width:180px;height:180px;
+  background:radial-gradient(circle,rgba(37,99,235,.18),transparent 70%);pointer-events:none;
+}
+.terminal-bar{display:flex;gap:6px;margin-bottom:20px}
+.terminal-bar span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}
+.terminal-bar span:first-child{background:#FF5F57}
+.terminal-bar span:nth-child(2){background:#FEBC2E}
+.terminal-bar span:nth-child(3){background:#28C840}
+.prompt-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
+  border-radius:8px;padding:14px 16px;margin-bottom:10px;position:relative;z-index:1;
+}
+.prompt-card:last-child{margin-bottom:0}
+.prompt-card__label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:7px}
+.prompt-card__text{font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.55;font-family:monospace}
+
+.solution__copy h2{
+  font-family:'Sora',sans-serif;font-size:clamp(26px,3.5vw,36px);
+  font-weight:700;line-height:1.18;margin-bottom:16px;letter-spacing:-.02em;
+}
+.solution__copy p{font-size:16px;color:var(--ink2);line-height:1.7;margin-bottom:12px}
+
+/* ── COPY-PASTE STRIP — CORRIGIDO ── */
+.copy-strip{
+  display:flex;align-items:stretch;justify-content:center;gap:0;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;margin:28px 0;
+}
+.copy-strip__step{
+  flex:1;text-align:center;padding:18px 10px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  border-right:1px solid var(--border);
+}
+.copy-strip__step:last-child{border-right:none}
+.copy-strip__step .icon{font-size:20px;line-height:1}
+.copy-strip__step .step-label{
+  font-size:13px;font-weight:700;color:var(--blue);display:block;line-height:1.2;
+}
+.copy-strip__step .step-desc{
+  font-size:12px;color:var(--ink2);line-height:1.3;display:block;
+}
+
+.module-count{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 28px;
+}
+.module-count__item{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px 12px;text-align:center;
+}
+.module-count__num{
+  font-family:'Sora',sans-serif;font-size:36px;font-weight:800;
+  color:var(--blue);letter-spacing:-.03em;line-height:1;margin-bottom:4px;
+}
+.module-count__name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.module-count__desc{font-size:11.5px;color:var(--ink3);line-height:1.4}
+
+#before-after{background:var(--bg2)}
+#before-after .section-title{text-align:center}
+#before-after .section-sub{text-align:center;max-width:560px;margin:0 auto 20px}
+
+.ba__tabs{
+  display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap;
+}
+.ba__tab{
+  background:none;border:1.5px solid var(--border);border-radius:40px;
+  padding:8px 20px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;
+  color:var(--ink2);cursor:pointer;transition:all .18s;
+}
+.ba__tab.active,.ba__tab:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+.ba__panel{display:none}
+.ba__panel.active{display:block}
+
+.ba__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba__col{border-radius:var(--radius-lg);padding:24px 26px;border:1px solid var(--border)}
+.ba__col--bad {background:#FFF8F8;border-color:rgba(220,38,38,.18)}
+.ba__col--good{background:var(--green-bg);border-color:rgba(22,163,74,.2)}
+.ba__col-header{
+  display:flex;align-items:center;gap:8px;margin-bottom:16px;
+  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+}
+.ba__col--bad  .ba__col-header{color:var(--red)}
+.ba__col--good .ba__col-header{color:var(--green)}
+.ba__label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.ba__prompt-box{
+  background:rgba(255,255,255,.9);border:1px solid var(--border);
+  border-radius:8px;padding:14px 16px;margin-bottom:12px;
+  font-size:13px;line-height:1.55;font-family:monospace;color:var(--ink);
+}
+.ba__response{
+  background:rgba(255,255,255,.7);border-radius:8px;
+  padding:14px 16px;font-size:13.5px;line-height:1.65;color:var(--ink2);
+}
+.ba__response ul{margin:8px 0 0 16px}
+.ba__response li{margin-bottom:5px;font-size:13px}
+.ba__copy-btn{
+  display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+  background:var(--green);color:#fff;font-size:12px;font-weight:600;
+  padding:8px 16px;border-radius:6px;border:none;cursor:pointer;
+  transition:background .18s,transform .15s;position:relative;
+}
+.ba__copy-btn:hover{background:#15803D;transform:translateY(-1px)}
+.ba__copy-btn .tooltip{
+  position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:var(--ink);color:#fff;font-size:11px;padding:4px 10px;
+  border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.ba__copy-btn.copied .tooltip{opacity:1}
+
+#curiosity{background:var(--bg-dark);color:#fff}
+#curiosity .label{color:var(--blue2);background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.2)}
+#curiosity .section-title{color:#fff}
+.curiosity__sub{font-size:17px;color:rgba(255,255,255,.52);margin-bottom:48px;line-height:1.65;max-width:540px}
+.curiosity__modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.curiosity__module{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);
+  border-radius:var(--radius-lg);padding:26px 24px;
+}
+.curiosity__module-title{
+  font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--blue2);margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+.curiosity__list{list-style:none}
+.curiosity__list li{
+  font-size:14px;color:rgba(255,255,255,.65);
+  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:flex-start;gap:10px;line-height:1.5;
+}
+.curiosity__list li:last-child{border-bottom:none}
+.curiosity__list li::before{content:'→';color:var(--blue2);font-size:13px;flex-shrink:0;margin-top:1px}
+
+#benefits{background:var(--bg)}
+.benefits__header{text-align:center;margin-bottom:52px}
+.benefits__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.benefit-card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:28px 24px;
+  box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .2s;
+}
+.benefit-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.benefit-card__icon{font-size:26px;margin-bottom:14px}
+.benefit-card h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.benefit-card p{font-size:14px;color:var(--ink2);line-height:1.6}
+
+.mid-cta{background:var(--blue);padding:64px 24px;text-align:center}
+.mid-cta h2{font-family:'Sora',sans-serif;font-size:clamp(22px,3.5vw,32px);font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
+.mid-cta p{font-size:16px;color:rgba(255,255,255,.72);margin-bottom:28px}
+
+/* ── PREVIEW — CORRIGIDO ── */
+#preview{background:var(--bg2)}
+#preview .section-title{text-align:center}
+.preview__sub{font-size:16px;color:var(--ink2);margin-bottom:44px;line-height:1.6;text-align:center}
+
+.preview__pages{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  margin-bottom:36px;
+}
+.preview__page{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.preview__page-header{
+  background:var(--blue);padding:14px 20px;
+  display:flex;align-items:center;gap:8px;
+}
+.preview__page-header span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.preview__page-header .page-num{
+  background:rgba(255,255,255,.2);color:#fff;
+  font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;
+}
+.preview__page-body{padding:20px}
+.preview__page-body h3{
+  font-family:'Sora',sans-serif;font-size:15px;font-weight:700;
+  color:var(--ink);margin-bottom:12px;
+}
+.preview__page-body p{font-size:13px;color:var(--ink2);line-height:1.6;margin-bottom:10px}
+.preview__page-body .steps-list{list-style:none;margin:0}
+.preview__page-body .steps-list li{
+  font-size:13px;color:var(--ink2);padding:6px 0;
+  display:flex;align-items:flex-start;gap:10px;line-height:1.5;
+  border-bottom:1px solid var(--border);
+}
+.preview__page-body .steps-list li:last-child{border-bottom:none}
+.preview__page-body .steps-list li .num{
+  background:var(--blue);color:#fff;
+  font-size:10px;font-weight:700;
+  min-width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.preview__prompt-list{list-style:none;margin:0}
+.preview__prompt-list li{
+  font-size:12.5px;color:var(--ink2);
+  padding:7px 0;border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;gap:8px;line-height:1.5;
+}
+.preview__prompt-list li:last-child{border-bottom:none}
+.preview__prompt-list li::before{content:'→';color:var(--blue);font-size:11px;flex-shrink:0;margin-top:2px}
+.preview__prompt-list .module-tag{
+  display:inline-block;background:var(--blue-bg);color:var(--blue);
+  font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 7px;border-radius:4px;margin-bottom:8px;
+}
+.preview__tip{
+  background:var(--blue-bg);border-left:3px solid var(--blue);
+  border-radius:6px;padding:10px 14px;margin-top:10px;
+}
+.preview__tip p{font-size:12px;color:var(--blue-dark,#1D4ED8);line-height:1.5;margin:0}
+.preview__cta-row{text-align:center}
+.preview__note{margin-top:12px;font-size:13px;color:var(--ink3)}
+
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(0,0,0,.85);
+  align-items:center;justify-content:center;padding:24px;
+}
+.modal-overlay.open{display:flex}
+
+#included{background:var(--bg)}
+.included__sub{font-size:16px;color:var(--ink2);margin-bottom:44px;line-height:1.6}
+.included__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.included__item{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px 22px;
+  box-shadow:var(--shadow-sm);transition:box-shadow .2s;
+}
+.included__item:hover{box-shadow:var(--shadow)}
+.included__item-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.included__item h3{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.included__item p{font-size:13px;color:var(--ink2);line-height:1.55}
+
+#howto{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;margin-top:52px}
+.step{text-align:center;padding:28px 16px}
+.step__num{
+  width:48px;height:48px;background:var(--blue);color:#fff;
+  font-family:'Sora',sans-serif;font-size:18px;font-weight:700;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 18px;box-shadow:0 4px 12px rgba(37,99,235,.35);
+}
+.step h3{font-size:15px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.step p{font-size:14px;color:var(--ink2);line-height:1.6}
+
+#forwho{background:var(--bg)}
+.forwho__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.forwho__col{border-radius:var(--radius-lg);padding:30px}
+.forwho__col--yes{background:var(--green-bg);border:1px solid rgba(22,163,74,.18)}
+.forwho__col--no {background:var(--red-bg);border:1px solid rgba(220,38,38,.14)}
+.forwho__col h3{font-size:15px;font-weight:700;margin-bottom:18px}
+.forwho__col--yes h3{color:var(--green)}
+.forwho__col--no  h3{color:var(--red)}
+.forwho__list{list-style:none}
+.forwho__list li{
+  font-size:14px;color:var(--ink2);padding:9px 0;
+  border-bottom:1px solid rgba(15,23,42,.06);
+  display:flex;align-items:flex-start;gap:10px;line-height:1.5;
+}
+.forwho__list li:last-child{border-bottom:none}
+.forwho__col--yes .forwho__list li::before{content:'✓';color:var(--green);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px}
+.forwho__col--no  .forwho__list li::before{content:'✗';color:var(--red);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px}
+
+#credibility{background:var(--bg2);padding:72px 0}
+.cred__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.cred__item{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px 22px;
+  text-align:center;box-shadow:var(--shadow-sm);
+}
+.cred__item-icon{font-size:28px;margin-bottom:12px}
+.cred__item h3{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.cred__item p{font-size:13px;color:var(--ink2);line-height:1.55}
+
+#price{background:var(--bg)}
+.price__contrast{
+  max-width:580px;margin:0 auto 40px;text-align:center;
+  background:var(--amber-bg);border:1px solid rgba(217,119,6,.2);
+  border-radius:var(--radius-lg);padding:24px 28px;
+}
+.price__contrast h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.price__contrast p{font-size:15px;color:var(--ink2);line-height:1.6}
+.price__contrast .highlight{color:var(--amber);font-weight:700}
+.price__box{
+  max-width:500px;margin:0 auto;background:var(--bg);
+  border:1.5px solid rgba(37,99,235,.2);border-radius:var(--radius-lg);
+  padding:48px 44px;text-align:center;box-shadow:var(--shadow-lg);
+  position:relative;overflow:hidden;
+}
+.price__box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
+.price__badge{
+  display:inline-block;background:var(--blue-bg);color:var(--blue);
+  font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:5px 14px;border-radius:40px;border:1px solid rgba(37,99,235,.18);margin-bottom:24px;
+}
+.price__from{font-size:15px;color:var(--ink3);text-decoration:line-through;margin-bottom:4px}
+.price__amount{font-family:'Sora',sans-serif;font-size:60px;font-weight:800;color:var(--ink);line-height:1;margin-bottom:4px;letter-spacing:-.03em}
+.price__amount sup{font-size:26px;vertical-align:super;font-weight:700}
+.price__anchor{font-size:14px;color:var(--green);font-weight:600;margin-bottom:6px}
+.price__label{font-size:13px;color:var(--ink2);margin-bottom:32px}
+.price__perks{list-style:none;text-align:left;margin-bottom:32px}
+.price__perks li{
+  font-size:14px;padding:10px 0;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;color:var(--ink2);
+}
+.price__perks li:last-child{border-bottom:none}
+.price__perks li::before{content:'✓';color:var(--green);font-weight:700;font-size:14px;flex-shrink:0}
+.price__risk{margin-top:20px;font-size:12.5px;color:var(--ink3);line-height:1.55;text-align:center}
+.price__risk a{color:var(--blue);text-decoration:none}
+.price__risk a:hover{text-decoration:underline}
+.price__note{margin-top:14px;font-size:12px;color:var(--ink3);display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+
+#faq{background:var(--bg2)}
+#faq .section-title{text-align:center;margin-bottom:48px}
+.faq__list{max-width:680px;margin:0 auto}
+.faq__item{border-bottom:1px solid var(--border)}
+.faq__q{
+  width:100%;background:none;border:none;text-align:left;
+  padding:20px 0;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;
+  color:var(--ink);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  transition:color .18s;
+}
+.faq__q:hover,.faq__q:focus-visible{color:var(--blue);outline:none}
+.faq__q:focus-visible{box-shadow:0 0 0 2px var(--blue);border-radius:4px}
+.faq__arrow{font-size:20px;transition:transform .3s;color:var(--blue);flex-shrink:0;font-weight:400}
+.faq__item.open .faq__arrow{transform:rotate(45deg)}
+.faq__a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq__a p{padding-bottom:20px;font-size:14px;color:var(--ink2);line-height:1.7}
+.faq__item.open .faq__a{max-height:240px}
+
+#final{background:var(--bg-dark);color:#fff;text-align:center;position:relative;overflow:hidden}
+#final::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.18),transparent 65%);
+  pointer-events:none;
+}
+.final__inner{position:relative;z-index:1;max-width:640px;margin:0 auto;text-align:center}
+.final__h2{
+  font-family:'Sora',sans-serif;font-size:clamp(28px,4.5vw,48px);
+  font-weight:800;line-height:1.1;color:#fff;
+  margin-bottom:18px;letter-spacing:-.03em;
+}
+.final__h2 .accent{color:var(--blue2)}
+.final__p{font-size:17px;color:rgba(255,255,255,.52);margin-bottom:36px;line-height:1.65}
+.final__note{margin-top:18px;font-size:13px;color:rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+
+@media(max-width:720px){
+  section{padding:72px 0}
+  .solution__inner{grid-template-columns:1fr;gap:40px}
+  .forwho__grid{grid-template-columns:1fr}
+  .ba__grid{grid-template-columns:1fr}
+  .module-count{grid-template-columns:repeat(3,1fr)}
+  .price__box{padding:36px 24px}
+  .price__amount{font-size:52px}
+  .hero__stat-row{gap:28px}
+  .preview__pages{grid-template-columns:1fr}
+  .copy-strip{flex-direction:column}
+  .copy-strip__step{border-right:none;border-bottom:1px solid var(--border)}
+  .copy-strip__step:last-child{border-bottom:none}
+}
+@media(max-width:480px){
+  .module-count{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar" role="banner" aria-label="Promoção de lançamento">
+  <p>🚀 <strong>Preço de lançamento:</strong> disponível por R$17,90 por tempo limitado.</p>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+  <div class="hero__glow"  aria-hidden="true"></div>
+  <div class="hero__glow2" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__badge reveal" aria-hidden="true">
+      <span class="hero__badge-dot"></span>
+      Guia prático · E-book com prompts prontos
+    </div>
+
+    <h1 class="hero__h1 reveal" id="hero-heading" style="transition-delay:.08s">
+      Use inteligência artificial no seu dia a dia —<br>
+      <span class="accent">mesmo sem saber escrever prompts.</span>
+    </h1>
+
+    <p class="hero__sub reveal" style="transition-delay:.16s">
+      Um guia com prompts prontos para estudar com mais foco,
+      organizar sua rotina e escrever melhor com ChatGPT —
+      sem precisar aprender nada técnico.
+    </p>
+
+    <div class="hero__ctas reveal" style="transition-delay:.24s">
+      <a href="<!-- CHECKOUT_URL -->"
+         class="btn btn--lg"
+         aria-label="Quero usar IA de verdade — acessar o guia por R$17,90">
+        Quero usar IA de verdade →
+      </a>
+      <p class="hero__trust">
+        🔒 Pagamento seguro
+        <span class="hero__trust-sep">·</span>
+        Acesso imediato
+        <span class="hero__trust-sep">·</span>
+        Funciona com ChatGPT gratuito
+      </p>
+    </div>
+
+    <div class="hero__stat-row reveal" style="transition-delay:.32s" aria-label="Resumo do produto">
+      <div class="hero__stat">
+        <strong>19</strong>
+        <span>Prompts práticos</span>
+      </div>
+      <div class="hero__stat">
+        <strong>3</strong>
+        <span>Módulos de uso real</span>
+      </div>
+      <div class="hero__stat">
+        <strong>&lt;5min</strong>
+        <span>Para o primeiro resultado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">O problema</span>
+      <h2 class="section-title" id="problem-heading">Você usa IA, mas as respostas nunca são o que precisava</h2>
+      <p class="section-sub">O ChatGPT é poderoso — mas a maioria das pessoas recebe respostas vagas. Não porque a ferramenta é ruim. Porque ninguém ensinou a estrutura certa para pedir.</p>
+    </div>
+    <div class="problem__grid">
+      <div class="problem__card reveal" style="transition-delay:.08s">
+        <div class="problem__card-icon" aria-hidden="true">😤</div>
+        <h3>"A resposta foi vaga demais"</h3>
+        <p>Você pergunta algo específico e recebe uma lista genérica que não serve para nada na prática.</p>
+      </div>
+      <div class="problem__card reveal" style="transition-delay:.14s">
+        <div class="problem__card-icon" aria-hidden="true">🔄</div>
+        <h3>"Fico reformulando a mesma pergunta"</h3>
+        <p>Tenta de novo, muda as palavras, acrescenta contexto — e o resultado ainda decepciona. Você gasta mais tempo do que economiza.</p>
+      </div>
+      <div class="problem__card reveal" style="transition-delay:.2s">
+        <div class="problem__card-icon" aria-hidden="true">🤷</div>
+        <h3>"Sei que é útil, mas não sei como usar"</h3>
+        <p>A ferramenta está ali, gratuita e acessível — mas você não sabe por onde começar para ter resultados reais no cotidiano.</p>
+      </div>
+    </div>
+    <div class="problem__insight reveal" style="transition-delay:.26s">
+      <p><strong>O problema não é a IA.</strong> É a forma de pedir. Um prompt bem estruturado muda completamente o que você recebe como resposta — e este guia resolve isso com prompts que você simplesmente copia e usa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution" aria-labelledby="solution-heading">
+  <div class="container">
+    <div class="solution__inner">
+      <div class="solution__visual reveal" aria-hidden="true">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <div class="prompt-card">
+          <div class="prompt-card__label">📚 Estudo</div>
+          <div class="prompt-card__text">"Explique este assunto como se eu tivesse 12 anos: [cole o tema aqui]."</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card__label">⚙️ Produtividade</div>
+          <div class="prompt-card__text">"Organize meu dia com base nestas tarefas: [liste as tarefas]."</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card__label">💬 Comunicação</div>
+          <div class="prompt-card__text">"Reescreva este texto de forma clara, educada e objetiva: [texto]."</div>
+        </div>
+      </div>
+
+      <div class="solution__copy reveal" style="transition-delay:.12s">
+        <span class="label" aria-hidden="true">A solução</span>
+        <h2 id="solution-heading">Você não precisa aprender prompts.<br>Basta copiar, colar e adaptar.</h2>
+        <p>O <strong>IA para a Vida Real</strong> é um guia com prompts práticos organizados em três módulos: Estudo, Produtividade e Comunicação. Cada prompt tem campos marcados com colchetes [ ] para você substituir pelo seu contexto real.</p>
+
+        <!-- COPY-PASTE STRIP — CORRIGIDO -->
+        <div class="copy-strip" aria-label="Como usar os prompts">
+          <div class="copy-strip__step">
+            <span class="icon" aria-hidden="true">📋</span>
+            <span class="step-label">Copie</span>
+            <span class="step-desc">o prompt</span>
+          </div>
+          <div class="copy-strip__step">
+            <span class="icon" aria-hidden="true">💬</span>
+            <span class="step-label">Cole</span>
+            <span class="step-desc">no ChatGPT</span>
+          </div>
+          <div class="copy-strip__step">
+            <span class="icon" aria-hidden="true">✏️</span>
+            <span class="step-label">Adapte</span>
+            <span class="step-desc">os campos [ ]</span>
+          </div>
+          <div class="copy-strip__step">
+            <span class="icon" aria-hidden="true">✅</span>
+            <span class="step-label">Receba</span>
+            <span class="step-desc">a resposta certa</span>
+          </div>
+        </div>
+
+        <div class="module-count" aria-label="Prompts por módulo">
+          <div class="module-count__item">
+            <div class="module-count__num">7</div>
+            <div class="module-count__name">Estudo</div>
+            <div class="module-count__desc">Aprender e revisar</div>
+          </div>
+          <div class="module-count__item">
+            <div class="module-count__num">6</div>
+            <div class="module-count__name">Produtividade</div>
+            <div class="module-count__desc">Planejar e organizar</div>
+          </div>
+          <div class="module-count__item">
+            <div class="module-count__num">6</div>
+            <div class="module-count__name">Comunicação</div>
+            <div class="module-count__desc">Escrever com clareza</div>
+          </div>
+        </div>
+
+        <a href="#price" class="btn btn--ghost" aria-label="Ver detalhes do produto">Ver o guia completo ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after" aria-labelledby="ba-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">Demo real</span>
+      <h2 class="section-title" id="ba-heading">A mesma pergunta. Resultados completamente diferentes.</h2>
+      <p class="section-sub">Só muda a forma de pedir. Veja o impacto dos prompts do guia.</p>
+    </div>
+
+    <div class="ba__tabs reveal" style="transition-delay:.08s" role="tablist" aria-label="Selecionar exemplo">
+      <button class="ba__tab active" role="tab" aria-selected="true"  aria-controls="ba-panel-1" data-panel="ba-panel-1">📚 Estudo</button>
+      <button class="ba__tab"        role="tab" aria-selected="false" aria-controls="ba-panel-2" data-panel="ba-panel-2">⚙️ Produtividade</button>
+      <button class="ba__tab"        role="tab" aria-selected="false" aria-controls="ba-panel-3" data-panel="ba-panel-3">💬 Comunicação</button>
+    </div>
+
+    <div id="ba-panel-1" class="ba__panel active reveal" style="transition-delay:.14s" role="tabpanel">
+      <div class="ba__grid">
+        <div class="ba__col ba__col--bad">
+          <div class="ba__col-header" aria-hidden="true">❌ Prompt genérico</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Explique fotossíntese."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>A fotossíntese é o processo pelo qual plantas produzem energia. Envolve luz solar, água e CO₂. O resultado é glicose e oxigênio.</p>
+            <p style="margin-top:8px;font-size:12px;color:var(--red)">→ Resposta de dicionário. Não ajuda a entender de verdade.</p>
+          </div>
+        </div>
+        <div class="ba__col ba__col--good">
+          <div class="ba__col-header" aria-hidden="true">✅ Prompt do guia</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Explique este assunto como se eu tivesse 12 anos: fotossíntese."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>Imagine que a planta é uma fábrica de energia. Ela usa a luz do sol como combustível, água como matéria-prima e ar (CO₂) como ingrediente. O resultado é o "açúcar" que a planta usa para crescer — e o oxigênio que você respira.</p>
+            <ul>
+              <li>Entrada: luz + água + CO₂</li>
+              <li>Saída: glicose (energia) + O₂</li>
+              <li>Onde acontece: nas folhas, nas partes verdes</li>
+            </ul>
+          </div>
+          <button class="ba__copy-btn" data-prompt="Explique este assunto como se eu tivesse 12 anos: [cole o tema aqui]." aria-label="Copiar este prompt">
+            📋 Copiar este prompt
+            <span class="tooltip" aria-live="polite">Copiado!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="ba-panel-2" class="ba__panel reveal" role="tabpanel">
+      <div class="ba__grid">
+        <div class="ba__col ba__col--bad">
+          <div class="ba__col-header" aria-hidden="true">❌ Prompt genérico</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Me ajude a ser mais produtivo."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>Para ser mais produtivo: acorde cedo, evite distrações, faça listas de tarefas, descanse bem e mantenha foco nas prioridades.</p>
+            <p style="margin-top:8px;font-size:12px;color:var(--red)">→ Conselho genérico. Poderia ser qualquer artigo de blog.</p>
+          </div>
+        </div>
+        <div class="ba__col ba__col--good">
+          <div class="ba__col-header" aria-hidden="true">✅ Prompt do guia</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Organize meu dia com base nestas tarefas: reunião às 10h, entregar relatório, responder e-mails, academia às 19h."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>Aqui está uma sugestão de organização para o seu dia:</p>
+            <ul>
+              <li>08h–09h30: Entregar relatório (energia alta pela manhã)</li>
+              <li>09h30–10h: Preparar para a reunião</li>
+              <li>10h–11h: Reunião</li>
+              <li>11h–12h: Responder e-mails prioritários</li>
+              <li>19h: Academia</li>
+            </ul>
+          </div>
+          <button class="ba__copy-btn" data-prompt="Organize meu dia com base nestas tarefas: [liste as tarefas]." aria-label="Copiar este prompt">
+            📋 Copiar este prompt
+            <span class="tooltip" aria-live="polite">Copiado!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="ba-panel-3" class="ba__panel reveal" role="tabpanel">
+      <div class="ba__grid">
+        <div class="ba__col ba__col--bad">
+          <div class="ba__col-header" aria-hidden="true">❌ Prompt genérico</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Melhore este texto: precisamos do relatório até amanhã enviar logo."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>"Precisamos do relatório até amanhã. Por favor, envie o quanto antes."</p>
+            <p style="margin-top:8px;font-size:12px;color:var(--red)">→ Corrigiu a gramática, mas ficou frio e sem contexto.</p>
+          </div>
+        </div>
+        <div class="ba__col ba__col--good">
+          <div class="ba__col-header" aria-hidden="true">✅ Prompt do guia</div>
+          <div class="ba__label">O que você digitou</div>
+          <div class="ba__prompt-box">"Reescreva este texto de forma clara, educada e objetiva: precisamos do relatório até amanhã enviar logo."</div>
+          <div class="ba__label">O que a IA respondeu</div>
+          <div class="ba__response">
+            <p>"Oi! Gostaria de lembrar que precisamos do relatório até amanhã. Se possível, envie assim que estiver pronto. Obrigado!"</p>
+            <p style="margin-top:8px;font-size:12px;color:var(--green);font-weight:500">→ Clara, educada, profissional — pronta para enviar.</p>
+          </div>
+          <button class="ba__copy-btn" data-prompt="Reescreva este texto de forma clara, educada e objetiva: [texto]." aria-label="Copiar este prompt">
+            📋 Copiar este prompt
+            <span class="tooltip" aria-live="polite">Copiado!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURIOSITY -->
+<section id="curiosity" aria-labelledby="curiosity-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">O que você vai encontrar</span>
+      <h2 class="section-title" id="curiosity-heading">Alguns prompts que estão no guia</h2>
+      <p class="curiosity__sub">Estes são exemplos reais do conteúdo. Cada um resolve uma situação prática do dia a dia.</p>
+    </div>
+    <div class="curiosity__modules">
+      <div class="curiosity__module reveal" style="transition-delay:.06s">
+        <div class="curiosity__module-title">
+          <span aria-hidden="true">📚</span> Estudo — 7 prompts
+        </div>
+        <ul class="curiosity__list" aria-label="Exemplos de prompts de estudo">
+          <li>Explique este assunto de forma simples, com exemplos do dia a dia</li>
+          <li>+ 6 prompts para aprender, revisar e fixar conteúdo</li>
+        </ul>
+      </div>
+      <div class="curiosity__module reveal" style="transition-delay:.12s">
+        <div class="curiosity__module-title">
+          <span aria-hidden="true">⚙️</span> Produtividade — 6 prompts
+        </div>
+        <ul class="curiosity__list" aria-label="Exemplos de prompts de produtividade">
+          <li>Organize meu dia considerando minhas tarefas e o tempo disponível</li>
+          <li>+ 5 prompts para planejar, priorizar e bater metas</li>
+        </ul>
+      </div>
+      <div class="curiosity__module reveal" style="transition-delay:.18s">
+        <div class="curiosity__module-title">
+          <span aria-hidden="true">💬</span> Comunicação — 6 prompts
+        </div>
+        <ul class="curiosity__list" aria-label="Exemplos de prompts de comunicação">
+          <li>Reescreva esta mensagem de forma clara e educada</li>
+          <li>+ 5 prompts para escrever melhor em qualquer situação</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" aria-labelledby="benefits-heading">
+  <div class="container">
+    <div class="benefits__header reveal">
+      <span class="label" aria-hidden="true">Benefícios</span>
+      <h2 class="section-title" id="benefits-heading">O que muda na prática</h2>
+      <p class="section-sub">Resultados concretos, não teoria. É isso que cada prompt entrega.</p>
+    </div>
+    <div class="benefits__grid">
+      <div class="benefit-card reveal" style="transition-delay:.06s">
+        <div class="benefit-card__icon" aria-hidden="true">🎯</div>
+        <h3>Pare de receber respostas genéricas</h3>
+        <p>Prompts estruturados fazem a IA entender exatamente o que você precisa — sem precisar tentar várias vezes.</p>
+      </div>
+      <div class="benefit-card reveal" style="transition-delay:.10s">
+        <div class="benefit-card__icon" aria-hidden="true">⚡</div>
+        <h3>Economize tempo toda semana</h3>
+        <p>Sem reformular prompts do zero. Você já tem o template — é só ajustar os campos e enviar.</p>
+      </div>
+      <div class="benefit-card reveal" style="transition-delay:.14s">
+        <div class="benefit-card__icon" aria-hidden="true">📖</div>
+        <h3>Estude de forma mais eficiente</h3>
+        <p>Peça explicações no seu nível, gere resumos para prova e crie perguntas de revisão em segundos.</p>
+      </div>
+      <div class="benefit-card reveal" style="transition-delay:.18s">
+        <div class="benefit-card__icon" aria-hidden="true">🗂️</div>
+        <h3>Organize sua rotina com clareza</h3>
+        <p>Planejamentos de dia, listas de prioridade, planos de meta — a IA faz o trabalho pesado de organização.</p>
+      </div>
+      <div class="benefit-card reveal" style="transition-delay:.22s">
+        <div class="benefit-card__icon" aria-hidden="true">✍️</div>
+        <h3>Escreva melhor, em menos tempo</h3>
+        <p>E-mails, mensagens, textos profissionais — claros e diretos, sem ficar preso na página em branco.</p>
+      </div>
+      <div class="benefit-card reveal" style="transition-delay:.26s">
+        <div class="benefit-card__icon" aria-hidden="true">🚀</div>
+        <h3>Sem curva de aprendizado</h3>
+        <p>Não é um curso. Não tem teoria para estudar. É um guia para usar agora — copiar, colar e adaptar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<div class="mid-cta" role="complementary" aria-label="Chamada para ação">
+  <div class="container">
+    <h2 class="reveal">Quer ver como funciona no seu caso?</h2>
+    <p class="reveal" style="transition-delay:.08s">Por R$17,90 você acessa o guia completo e começa a usar IA de verdade hoje.</p>
+    <a href="<!-- CHECKOUT_URL -->"
+       class="btn btn--white reveal"
+       style="transition-delay:.14s"
+       aria-label="Quero acessar o guia agora">
+      Quero acessar o guia →
+    </a>
+  </div>
+</div>
+
+<!-- PREVIEW — CORRIGIDO: conteúdo real do PDF -->
+<section id="preview" aria-labelledby="preview-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">Pré-visualização</span>
+      <h2 class="section-title" id="preview-heading">Veja o que está dentro do guia</h2>
+      <p class="preview__sub">Conteúdo real, sem surpresas. O que você vê é exatamente o que recebe.</p>
+    </div>
+
+    <div class="preview__pages reveal" style="transition-delay:.1s">
+
+      <!-- Página 1: Capa -->
+      <div class="preview__page">
+        <div class="preview__page-header">
+          <span class="page-num">Capa</span>
+          <span>IA para a Vida Real</span>
+        </div>
+        <div class="preview__page-body">
+          <h3>IA PARA A VIDA REAL</h3>
+          <p>Prompts simples para estudar, organizar a rotina e escrever melhor com inteligência artificial.</p>
+          <p style="font-size:13px;color:var(--blue);font-weight:600;margin-top:8px">Estudo · Produtividade · Comunicação</p>
+        </div>
+      </div>
+
+      <!-- Página 2: Estrutura interna -->
+      <div class="preview__page">
+        <div class="preview__page-header">
+          <span class="page-num">Conteúdo</span>
+          <span>O que está dentro</span>
+        </div>
+        <div class="preview__page-body">
+          <h3>3 módulos. 19 prompts.</h3>
+          <p>Cada módulo reúne prompts com campos [ ] para você adaptar ao seu contexto — sem precisar criar nada do zero.</p>
+          <ul class="steps-list" style="margin-top:12px">
+            <li><span class="num">📚</span> Estudo — 7 prompts</li>
+            <li><span class="num">⚙️</span> Produtividade — 6 prompts</li>
+            <li><span class="num">💬</span> Comunicação — 6 prompts</li>
+          </ul>
+          <div class="preview__tip" style="margin-top:14px">
+            <p>🔒 O conteúdo completo está disponível após a compra.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="preview__cta-row reveal" style="transition-delay:.2s">
+      <a href="<!-- CHECKOUT_URL -->"
+         class="btn"
+         aria-label="Garantir acesso ao guia por R$17,90">
+        Garantir meu acesso por R$17,90 →
+      </a>
+      <p class="preview__note">🔒 Acesso imediato após a compra · Sem mensalidade</p>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section id="included" aria-labelledby="included-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">O que está incluído</span>
+      <h2 class="section-title" id="included-heading">O que você recebe por R$17,90</h2>
+      <p class="included__sub">Um guia pequeno, direto e prático — sem teoria desnecessária.</p>
+    </div>
+    <div class="included__grid">
+      <div class="included__item reveal" style="transition-delay:.05s">
+        <div class="included__item-icon" aria-hidden="true">📚</div>
+        <div>
+          <h3>Módulo de Estudo — 7 prompts</h3>
+          <p>Explicações simplificadas, resumos, pontos principais, questões de revisão e comparações entre temas.</p>
+        </div>
+      </div>
+      <div class="included__item reveal" style="transition-delay:.09s">
+        <div class="included__item-icon" aria-hidden="true">⚙️</div>
+        <div>
+          <h3>Módulo de Produtividade — 6 prompts</h3>
+          <p>Organização do dia, listas de prioridade, quebra de tarefas, rotina matinal e plano de metas.</p>
+        </div>
+      </div>
+      <div class="included__item reveal" style="transition-delay:.13s">
+        <div class="included__item-icon" aria-hidden="true">💬</div>
+        <div>
+          <h3>Módulo de Comunicação — 6 prompts</h3>
+          <p>Reescrita de textos, respostas educadas, mensagens mais claras e diretas para WhatsApp e e-mail.</p>
+        </div>
+      </div>
+      <div class="included__item reveal" style="transition-delay:.17s">
+        <div class="included__item-icon" aria-hidden="true">🔖</div>
+        <div>
+          <h3>Prompts com campos [ ] para adaptar</h3>
+          <p>Cada prompt tem marcadores claros onde você substitui pelo seu contexto — simples e rápido.</p>
+        </div>
+      </div>
+      <div class="included__item reveal" style="transition-delay:.21s">
+        <div class="included__item-icon" aria-hidden="true">🎓</div>
+        <div>
+          <h3>Mini-guia de uso</h3>
+          <p>Instrução direta sobre como copiar, colar, adaptar e obter melhores resultados — mesmo sendo iniciante.</p>
+        </div>
+      </div>
+      <div class="included__item reveal" style="transition-delay:.25s">
+        <div class="included__item-icon" aria-hidden="true">♾️</div>
+        <div>
+          <h3>Acesso vitalício</h3>
+          <p>Pagamento único. Sem assinatura, sem renovação. O guia é seu para sempre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="howto" aria-labelledby="howto-heading">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="label" aria-hidden="true">Como funciona</span>
+      <h2 class="section-title" id="howto-heading">Do acesso ao primeiro resultado<br>em menos de 5 minutos</h2>
+      <p class="section-sub" style="max-width:500px;margin:0 auto">Sem vídeo para assistir, sem teoria para estudar. Abre e usa.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="transition-delay:.06s">
+        <div class="step__num" aria-hidden="true">1</div>
+        <h3>Acesse o guia</h3>
+        <p>Conclua o pagamento na Hotmart e acesse o material imediatamente — processo automático, sem espera.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.12s">
+        <div class="step__num" aria-hidden="true">2</div>
+        <h3>Abra o ChatGPT</h3>
+        <p>A versão gratuita já funciona. Não precisa criar conta nova nem instalar nada.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.18s">
+        <div class="step__num" aria-hidden="true">3</div>
+        <h3>Copie o prompt certo</h3>
+        <p>Escolha o módulo (Estudo, Produtividade ou Comunicação) e copie o template que se encaixa.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.24s">
+        <div class="step__num" aria-hidden="true">4</div>
+        <h3>Adapte e envie</h3>
+        <p>Substitua os campos [ ] com seu contexto. A IA entrega o que você precisava — na primeira tentativa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section id="forwho" aria-labelledby="forwho-heading">
+  <div class="container">
+    <div class="reveal">
+      <span class="label" aria-hidden="true">Para quem é</span>
+      <h2 class="section-title" id="forwho-heading">Este guia é para você?</h2>
+    </div>
+    <div class="forwho__grid">
+      <div class="forwho__col forwho__col--yes reveal" style="transition-delay:.08s">
+        <h3>✅ É para você se...</h3>
+        <ul class="forwho__list">
+          <li>Já usou ChatGPT mas ficou decepcionado com as respostas</li>
+          <li>Quer usar IA no trabalho, estudos ou dia a dia — sem complicação</li>
+          <li>Precisa de algo prático e direto, sem precisar estudar sobre IA</li>
+          <li>Quer economizar tempo na escrita, organização e aprendizado</li>
+          <li>É iniciante e quer um ponto de partida simples e confiável</li>
+        </ul>
+      </div>
+      <div class="forwho__col forwho__col--no reveal" style="transition-delay:.14s">
+        <h3>❌ Não é para você se...</h3>
+        <ul class="forwho__list">
+          <li>Você já domina engenharia de prompts avançada</li>
+          <li>Procura um curso com horas de vídeo e certificado</li>
+          <li>Quer conteúdo técnico sobre como a IA funciona por dentro</li>
+          <li>Não tem interesse em usar IA no seu cotidiano</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<section id="credibility" aria-labelledby="cred-heading">
+  <div class="container">
+    <h2 class="sr-only" id="cred-heading">Sinais de confiança</h2>
+    <div class="cred__grid">
+      <div class="cred__item reveal" style="transition-delay:.05s">
+        <div class="cred__item-icon" aria-hidden="true">🧪</div>
+        <h3>Prompts testados em situações reais</h3>
+        <p>Cada template foi validado em contextos reais de estudo, trabalho e comunicação — não em exemplos artificiais.</p>
+      </div>
+      <div class="cred__item reveal" style="transition-delay:.09s">
+        <div class="cred__item-icon" aria-hidden="true">🎯</div>
+        <h3>Feito para iniciantes</h3>
+        <p>Zero conhecimento técnico necessário. Se você sabe abrir o ChatGPT e digitar, já é suficiente.</p>
+      </div>
+      <div class="cred__item reveal" style="transition-delay:.13s">
+        <div class="cred__item-icon" aria-hidden="true">⚙️</div>
+        <h3>Funciona com ChatGPT gratuito</h3>
+        <p>Todos os 19 prompts funcionam com a versão gratuita do ChatGPT — sem plano premium.</p>
+      </div>
+      <div class="cred__item reveal" style="transition-delay:.17s">
+        <div class="cred__item-icon" aria-hidden="true">📲</div>
+        <h3>Acesso imediato via Hotmart</h3>
+        <p>Entrega automática pela plataforma Hotmart logo após o pagamento. Sem esperar, sem processo manual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" aria-labelledby="price-heading">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="label" aria-hidden="true">Investimento</span>
+      <h2 class="section-title" id="price-heading">Acesso completo. Preço de lançamento.</h2>
+      <p class="section-sub" style="max-width:500px;margin:0 auto 40px">Por tempo limitado, você garante o guia pelo menor preço possível.</p>
+    </div>
+
+    <div class="price__contrast reveal" style="transition-delay:.06s">
+      <h3>Quanto tempo você perde reformulando prompts?</h3>
+      <p>São minutos (às vezes horas) tentando fazer a IA entender o que você precisa. Por <span class="highlight">menos de R$20</span> você tem templates prontos que funcionam na primeira tentativa.</p>
+    </div>
+
+    <div class="price__box reveal" style="transition-delay:.12s">
+      <div class="price__badge">🚀 Preço de lançamento</div>
+      <p class="price__from" aria-label="Preço original: R$47,00">De R$47,00</p>
+      <div class="price__amount" aria-label="Por apenas R$17,90"><sup>R$</sup>17<small style="font-size:34px">,90</small></div>
+      <p class="price__anchor">Menos que um almoço — resultado aplicável hoje.</p>
+      <p class="price__label">Pagamento único · Sem mensalidade · Acesso vitalício</p>
+      <ul class="price__perks" aria-label="O que está incluído">
+        <li>19 prompts prontos e testados (7+6+6)</li>
+        <li>3 módulos: Estudo, Produtividade e Comunicação</li>
+        <li>Mini-guia de uso incluído</li>
+        <li>Acesso imediato via Hotmart</li>
+        <li>Funciona com o ChatGPT gratuito</li>
+        <li>Acesso vitalício — sem renovação</li>
+      </ul>
+      <a href="<!-- CHECKOUT_URL -->"
+         class="btn btn--lg"
+         style="width:100%;text-align:center;display:block"
+         aria-label="Comprar agora e acessar o guia por R$17,90">
+        Quero melhorar minhas respostas — R$17,90 →
+      </a>
+      <p class="price__note">🔒 Pagamento seguro · Acesso imediato pela Hotmart</p>
+      <p class="price__risk">
+        Compra única, sem renovação.
+        Qualquer problema com acesso? Escreva para
+        <a href="/cdn-cgi/l/email-protection#91adb0bcbcb1c2c4c1c1dec3c5ced4dcd0d8ddb1bcbcaf"><!-- SUPPORT_EMAIL --></a>
+        e resolvemos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="container--sm">
+    <h2 class="section-title" id="faq-heading">Perguntas frequentes</h2>
+    <div class="faq__list">
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a1">
+          Preciso ter experiência com IA para usar?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a1" role="region">
+          <p>Não. O guia foi criado especificamente para iniciantes. Os prompts são autoexplicativos e têm campos marcados com colchetes [ ] para substituir. Se você sabe abrir o ChatGPT, já é suficiente.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a2">
+          Funciona com a versão gratuita do ChatGPT?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a2" role="region">
+          <p>Sim. Todos os 19 prompts foram criados e testados com a versão gratuita do ChatGPT. Você não precisa de nenhum plano pago para usar o conteúdo completo.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a3">
+          Posso usar estes prompts em outras IAs além do ChatGPT?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a3" role="region">
+          <p>Sim. Os prompts foram projetados para funcionar em qualquer modelo de linguagem — Gemini, Copilot, Claude e similares. A estrutura é universal.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a4">
+          Como recebo o produto após a compra?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a4" role="region">
+          <p>Assim que o pagamento for confirmado, você acessa o material diretamente pela plataforma Hotmart. O processo é automático e leva menos de 2 minutos.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a5">
+          Quanto tempo leva para começar a usar?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a5" role="region">
+          <p>Menos de 5 minutos. Você abre o guia, copia o primeiro prompt, cola no ChatGPT e já tem o resultado. Não há nada para estudar antes de começar.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a6">
+          Isso é um curso? Tem vídeos ou aulas?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a6" role="region">
+          <p>Não. É um guia com prompts prontos para usar — sem vídeos, sem módulos longos. É um material prático e direto, feito para quem quer resultado imediato.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a7">
+          Este guia serve para uso profissional também?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a7" role="region">
+          <p>Sim. O módulo de Comunicação foi pensado para o ambiente de trabalho — e-mails, textos profissionais e mensagens claras. O módulo de Produtividade também se aplica diretamente ao cotidiano profissional.</p>
+        </div>
+      </div>
+
+      <div class="faq__item reveal">
+        <button class="faq__q" aria-expanded="false" aria-controls="faq-a8">
+          E se eu tiver problema com o acesso?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a" id="faq-a8" role="region">
+          <p>Basta escrever para <a href="/cdn-cgi/l/email-protection#c8f4e9e5e5e89b9d9898879a9c978d85898184e8e5e5f6"><!-- SUPPORT_EMAIL --></a>. Avaliamos cada caso e resolvemos o problema.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final" aria-labelledby="final-heading">
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="final__inner reveal">
+      <span class="label" aria-hidden="true">Comece agora</span>
+      <h2 class="final__h2" id="final-heading">
+        IA que funciona de verdade<br>
+        <span class="accent">no seu dia a dia.</span>
+      </h2>
+      <p class="final__p">
+        Por R$17,90 você tem um guia prático com prompts testados
+        para estudar, organizar e escrever melhor — com qualquer IA.
+      </p>
+      <a href="<!-- CHECKOUT_URL -->"
+         class="btn btn--lg"
+         aria-label="Acessar o guia agora por R$17,90">
+        Quero acessar o guia →
+      </a>
+      <p class="final__note">
+        🔒 Pagamento seguro
+        <span aria-hidden="true">·</span>
+        Acesso imediato pela Hotmart
+        <span aria-hidden="true">·</span>
+        Pagamento único, sem renovação
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  /* ── SCROLL REVEAL ── */
+  document.documentElement.classList.add('js-loaded');
+  document.body.classList.add('js-loaded');
+
+  var revealEls = document.querySelectorAll('.reveal');
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.05 });
+    revealEls.forEach(function(el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('visible'); });
+  }
+
+  setTimeout(function() {
+    document.querySelectorAll('#hero .reveal').forEach(function(el) { el.classList.add('visible'); });
+  }, 80);
+
+  setTimeout(function() {
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+  }, 1500);
+
+  /* ── FAQ ACCORDION ── */
+  document.querySelectorAll('.faq__q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq__item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ── BEFORE/AFTER TABS ── */
+  document.querySelectorAll('.ba__tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var panelId = btn.getAttribute('data-panel');
+      document.querySelectorAll('.ba__tab').forEach(function(t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.ba__panel').forEach(function(p) {
+        p.classList.remove('active');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      var panel = document.getElementById(panelId);
+      if (panel) { panel.classList.add('active'); panel.classList.add('visible'); }
+    });
+  });
+
+  /* ── COPY BUTTONS ── */
+  document.querySelectorAll('.ba__copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-prompt');
+      var doCopy = function() {
+        btn.classList.add('copied');
+        setTimeout(function() { btn.classList.remove('copied'); }, 2200);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(doCopy).catch(function() { fallbackCopy(text, doCopy); });
+      } else {
+        fallbackCopy(text, doCopy);
+      }
+    });
+  });
+
+  function fallbackCopy(text, cb) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+    cb();
+  }
+
+});
+</script>
+</body>
+</html>
